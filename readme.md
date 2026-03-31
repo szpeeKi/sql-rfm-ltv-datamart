@@ -36,11 +36,18 @@ The query outputs a denormalized table with 1 row per customer (360º View), fea
 - **Churn Risk Classification:** Automated flag based on recency (`Active`, `Sleeping`, `Risk of Churn`).
 - **LTV Rank:** The customer's position in the revenue ranking within their respective country.
 
+## 📂 Repository Structure
+
+* `01_schema_mock.sql`: DDL script to create the database schema and tables.
+* `01.02schema_insert.sql`: DML script to populate the tables with the mock dataset.
+* `02_rfm_transformation.sql`: The core analytical pipeline containing the CTEs, Window Functions, and final data mart assembly.
+
 ## 🚀 How to Run
 
 1. Clone this repository.
-2. Execute the `01_schema_mock.sql` file in your database (PostgreSQL/SQLite) to create the schema and inject the mock dataset (which includes edge cases like churned users, refunds, and brand-new accounts).
-3. Run the main script `02_rfm_transformation.sql` to compile the CTEs and generate the final segmentation table.
+2. Execute the `01_schema_mock.sql` file in your database (PostgreSQL/SQLite) to set up the foundational tables.
+3. Execute the `01.02schema_insert.sql` file to inject the mock dataset (which includes edge cases like churned users, refunds, and brand-new accounts).
+4. Run the main script `02_rfm_transformation.sql` to compile the CTEs and generate the final segmentation table.
 
 ---
 *Project developed to showcase advanced skills in Data Engineering and Analytical SQL.*
