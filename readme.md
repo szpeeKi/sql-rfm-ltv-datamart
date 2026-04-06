@@ -49,5 +49,21 @@ The query outputs a denormalized table with 1 row per customer (360º View), fea
 3. Execute the `01.02schema_insert.sql` file to inject the mock dataset (which includes edge cases like churned users, refunds, and brand-new accounts).
 4. Run the main script `02_rfm_transformation.sql` to compile the CTEs and generate the final segmentation table.
 
+## 📊 Parte 2: Visualização e Tomada de Decisão (Power BI)
+
+Para fechar o ciclo do dado (End-to-End), o resultado da query SQL foi conectado ao Power BI para a criação de um Dashboard Executivo. O objetivo foi transformar a base de dados bruta em uma ferramenta acionável para o time de Marketing.
+
+**[INSIRA AQUI O SEU PRINT/IMAGEM DO DASHBOARD]** *(Dica: arraste a imagem do dashboard para o editor do GitHub para ele gerar o link automático aqui)*
+
+### Destaques do Dashboard:
+- **Métricas Globais:** Cálculo de LTV Total e Ticket Médio Global utilizando medidas DAX com a função `DIVIDE` para garantir precisão matemática.
+- **Farol de Churn:** Gráfico de rosca segmentando a base entre clientes Ativos, Adormecidos e em Risco de Churn.
+- **Tabela de Ação:** Matriz interativa que filtra os dados dos clientes. Ao selecionar o "Risco de Churn", o time de marketing recebe a lista exata de nomes e categorias favoritas para envio de campanhas direcionadas.
+
+📁 **Arquivos disponíveis neste repositório:**
+- `script_rfm.sql`: Pipeline de dados e regras de negócio.
+- `dashboard_rfm.pbix`: Arquivo original do Power BI (requer Power BI Desktop para abrir).
+- `dashboard_preview.pdf`: Visualização estática do painel para rápida consulta.
+
 ---
 *Project developed to showcase advanced skills in Data Engineering and Analytical SQL.*
