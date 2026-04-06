@@ -53,7 +53,8 @@ The query outputs a denormalized table with 1 row per customer (360º View), fea
 
 Para fechar o ciclo do dado (End-to-End), o resultado da query SQL foi conectado ao Power BI para a criação de um Dashboard Executivo. O objetivo foi transformar a base de dados bruta em uma ferramenta acionável para o time de Marketing.
 
-**[INSIRA AQUI O SEU PRINT/IMAGEM DO DASHBOARD]** *(Dica: arraste a imagem do dashboard para o editor do GitHub para ele gerar o link automático aqui)*
+<img width="1424" height="808" alt="image" src="https://github.com/user-attachments/assets/2d1dd334-b66c-4cbb-9aaa-5d45e4315435" />
+
 
 ### Destaques do Dashboard:
 - **Métricas Globais:** Cálculo de LTV Total e Ticket Médio Global utilizando medidas DAX com a função `DIVIDE` para garantir precisão matemática.
