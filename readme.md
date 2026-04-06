@@ -49,22 +49,20 @@ The query outputs a denormalized table with 1 row per customer (360º View), fea
 3. Execute the `01.02schema_insert.sql` file to inject the mock dataset (which includes edge cases like churned users, refunds, and brand-new accounts).
 4. Run the main script `02_rfm_transformation.sql` to compile the CTEs and generate the final segmentation table.
 
-## 📊 Parte 2: Visualização e Tomada de Decisão (Power BI)
+## 📊 Part 2: Data Visualization & Decision Making (Power BI)
 
-Para fechar o ciclo do dado (End-to-End), o resultado da query SQL foi conectado ao Power BI para a criação de um Dashboard Executivo. O objetivo foi transformar a base de dados bruta em uma ferramenta acionável para o time de Marketing.
+To close the data cycle (End-to-End), the output of the SQL query was connected to Power BI to create an Executive Dashboard. The goal was to transform raw data into an actionable tool for the Marketing and Growth teams.
 
-<img width="1424" height="808" alt="image" src="https://github.com/user-attachments/assets/2d1dd334-b66c-4cbb-9aaa-5d45e4315435" />
+<img width="1431" height="808" alt="image" src="https://github.com/user-attachments/assets/feda1f2e-aefb-4bd7-b673-de0de6878666" />
 
+### Dashboard Highlights:
+- **Global Metrics:** Calculation of Total LTV and Global Average Ticket using DAX measures with the `DIVIDE` function to ensure mathematical accuracy and prevent errors.
+- **Churn Radar:** A donut chart segmenting the customer base into Active, Sleeping, and Risk of Churn.
+- **Actionable Table:** An interactive matrix that filters customer data. By selecting the "Risk of Churn" slice, the marketing team gets an exact list of names and favorite categories to send targeted campaigns and retention coupons.
 
-### Destaques do Dashboard:
-- **Métricas Globais:** Cálculo de LTV Total e Ticket Médio Global utilizando medidas DAX com a função `DIVIDE` para garantir precisão matemática.
-- **Farol de Churn:** Gráfico de rosca segmentando a base entre clientes Ativos, Adormecidos e em Risco de Churn.
-- **Tabela de Ação:** Matriz interativa que filtra os dados dos clientes. Ao selecionar o "Risco de Churn", o time de marketing recebe a lista exata de nomes e categorias favoritas para envio de campanhas direcionadas.
+📁 **Files available in this repository:**
+- `script_rfm.sql`: Data pipeline and business rules.
+- `dashboard_rfm.pbix`: Original Power BI file (requires Power BI Desktop to open).
+- `dashboard_preview.pdf`: Static preview of the dashboard for quick reference.
 
-📁 **Arquivos disponíveis neste repositório:**
-- `script_rfm.sql`: Pipeline de dados e regras de negócio.
-- `dashboard_rfm.pbix`: Arquivo original do Power BI (requer Power BI Desktop para abrir).
-- `dashboard_preview.pdf`: Visualização estática do painel para rápida consulta.
-
----
 *Project developed to showcase advanced skills in Data Engineering and Analytical SQL.*
